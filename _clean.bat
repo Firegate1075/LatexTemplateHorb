@@ -2,6 +2,7 @@
 
 if exist *.fdb_latexmk del /s /q *.fdb_latexmk
 if exist *.run.xml del /s /q *.run.xml
+if exist *.synctex.(busy) del /s /q *.synctex.(busy)
 if exist *.synctex.gz del /s /q *.synctex.gz
 if exist *.aux del /s /q *.aux
 if exist *.log del /s /q *.log

@@ -1,11 +1,10 @@
-% LTeX: enabled=false
 % Inhalt
-\foreach \i in {01,02,03,04,05,06,07,08,09,...,99} {   % search for max 99 chapters
-\edef\FileName{content/Kapitel/\i _kapitel}%
-    \IfFileExists{\FileName}{%
-        \input{\FileName}
+\foreach \i in {01,02,03,04,05,06,07,08,09,...,99} {% search for max 99 chapters
+        \edef\FileName{content/Kapitel/\i _kapitel}%
+        \IfFileExists{\FileName}{%
+            \input{\FileName}
+        }
+        {%
+            %file does not exist
+        }
     }
-    {%
-        %file does not exist
-    }
-}

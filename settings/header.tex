@@ -37,7 +37,7 @@
 \usepackage{etoolbox} %Untersützt ifstrempty
 
 % footnotes
-\usepackage{chngcntr} 
+\usepackage{chngcntr}
 \counterwithout{footnote}{chapter} % make footnotes not reset at the beginning of a chapter
 \renewcommand{\thempfootnote}{\arabic{mpfootnote}} % number footnotes
 \usepackage[perpage, hang, multiple, stable]{footmisc} % add footnote stuff
@@ -59,24 +59,24 @@
 \usepackage{blindtext}
 \blindmathtrue
 
- % colors
- \usepackage{color, colortbl}
- %Farbdefinition von hellgrau
- \definecolor{light-gray}{gray}{0.75}
- \definecolor{lightgray}{rgb}{.9,.9,.9}
- \definecolor{darkgray}{rgb}{.4,.4,.4}
- \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
- \definecolor{darkgreen}{RGB}{0, 238, 0}
- \definecolor{blue}{RGB}{44, 111, 235}
- %%%VISUAL STUDIO COLORS
- \definecolor{VSblue}{RGB}{44, 111, 235}
- \definecolor{VSstringred}{RGB}{163, 21, 21}
- \definecolor{VScitrine}{rgb}{0.89, 0.82, 0.04}
- \definecolor{VSblack}{rgb}{0.0, 0.0, 0.0}
- \definecolor{VSgreencomments}{rgb}{0,0.5,0}
- \definecolor{VSclassGreen}{RGB}{0, 125, 154}
- 
- \usepackage[dvipsnames,table,xcdraw]{xcolor} % needs to be loaded before pgfplots!
+% colors
+\usepackage{color, colortbl}
+%Farbdefinition von hellgrau
+\definecolor{light-gray}{gray}{0.75}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{darkgreen}{RGB}{0, 238, 0}
+\definecolor{blue}{RGB}{44, 111, 235}
+%%%VISUAL STUDIO COLORS
+\definecolor{VSblue}{RGB}{44, 111, 235}
+\definecolor{VSstringred}{RGB}{163, 21, 21}
+\definecolor{VScitrine}{rgb}{0.89, 0.82, 0.04}
+\definecolor{VSblack}{rgb}{0.0, 0.0, 0.0}
+\definecolor{VSgreencomments}{rgb}{0,0.5,0}
+\definecolor{VSclassGreen}{RGB}{0, 125, 154}
+
+\usepackage[dvipsnames,table,xcdraw]{xcolor} % needs to be loaded before pgfplots!
 
 
 %floats
@@ -88,7 +88,7 @@
 	%format=hang, justification=justified,									% format option 1: indented text,	label normal,	separated with colon,	justification
 	format=plain, justification=justified, labelfont=bf, labelsep=quad, 	% format option 2: no indents,		label bold,		separated with tab,		justification
 	singlelinecheck=true % center captions if they fit into a single line 
-	]{caption}
+]{caption}
 \usepackage{subcaption} % adds caption support for subfigures
 %\captionsetup[table]{position=above, aboveskip=4pt}%, belowskip=6pt} % should place the caption of tables above the table. Does not work!
 
@@ -105,7 +105,7 @@
 \usepackage{array}% in the preamble
 
 %figures
-\usepackage[pdftex]{graphicx}		
+\usepackage[pdftex]{graphicx}
 \graphicspath{{img/}}
 \usepackage{wrapfig} % allow placement of figures in text (wrap text around figure)
 
@@ -170,13 +170,13 @@
 %Umlaute und Sonderzeichen im listings erlauben
 \lstset{literate=%
 	{Ö}{{\"O}}1
-	{Ä}{{\"A}}1
-	{Ü}{{\"U}}1
-	{ß}{{\ss}}2
-	{ü}{{\"u}}1
-	{ä}{{\"a}}1
-	{ö}{{\"o}}1
-	{&}{{\&}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+{&}{{\&}}1
 }
 
 
@@ -207,7 +207,7 @@
 
 \acsetup{
 	first-style=shortLong,
-	trailing/activate={dash}, 
+	trailing/activate={dash},
 	make-links=true,
 	list/heading=addchap, % format table of acronyms (toa) as chapter* and add tot toc (\addchap of KOMA)
 	list/name= {Abkürzungsverzeichnis} % make table-of-commands style uniform
@@ -219,8 +219,8 @@
 	bibstyle=alphabetic, %authortitle,
 	language=ngerman, %Quellen auf Deutsch
 	hyperref=true, %Anklickbare Referenzen
-	natbib=true, 
-	backend=biber, 
+	natbib=true,
+	backend=biber,
 	pagetracker=true, %ebd. bei wiederholten Angaben
 	bibencoding=utf8,
 	backrefstyle=three+, % fasst Seiten zusammen, z. B S. 2f, 6ff, 7-10
@@ -228,7 +228,7 @@
 	bibwarn=true]{biblatex}
 
 \renewcommand*{\labelalphaothers}{\textsuperscript{+}} % handle multiple authors
-	
+
 \usepackage[babel,german=guillemets]{csquotes} % select quotes for bibliography
 \setlength{\bibitemsep}{1em}     % Abstand zwischen den Literaturangaben
 \setlength{\bibhang}{2em}        % Einzug nach jeweils erster Zeile
@@ -238,7 +238,7 @@
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
 
-				
+
 % kopf und fußzeile
 \usepackage[headsepline, footsepline, plainheadsepline, plainfootsepline]{scrlayer-scrpage}		% linie aktivieren für "headings" und "plain" seiten
 \automark{chapter}		% aktivieren das "chapter" und "section" oeben angezeigt werden kann
@@ -266,7 +266,7 @@
 % Formelverzeichniss
 \DeclareNewTOC[
 	tocentryindent=0pt,
-    tocentrynumwidth=2em,
+	tocentrynumwidth=2em,
 	type=equation,
 	name={Gl.},
 	types=equations,
