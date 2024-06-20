@@ -23,5 +23,9 @@ if exist *.ind del /s /q *.ind
 if exist *.bcf del /s /q *.bcf
 if exist *.equ del /s /q *.equ
 if exist *.fls del /s /q *.fls
+if exist *.lol del /s /q *.lol
+if exist *.lsy del /s /q *.lsy
+if exist *.dpth del /s /q *.dpth
+if exist *.md5 del /s /q *.md5
 
 echo Auxiliary files deleted

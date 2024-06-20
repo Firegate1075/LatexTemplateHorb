@@ -161,7 +161,8 @@
 	%fillcolor=\color{ListingBackground},
 	keywordstyle=\color[rgb]{0.133,0.133,0.6},
 	commentstyle=\color[rgb]{0.133,0.545,0.133},
-	stringstyle=\color[rgb]{0.627,0.126,0.941}
+	stringstyle=\color[rgb]{0.627,0.126,0.941},
+	aboveskip=\baselineskip	% some space to text above
 } % uses textcomp
 \renewcommand\lstlistingname{Codeausschnitt}
 \renewcommand\lstlistlistingname{Quellcodeverzeichnis}
@@ -249,7 +250,7 @@
 \clearpairofpagestyles
 
 % Der "*" macht, dass hier konfigurierte Einstellungen auch für "plain"-Seiten gelten
-\ihead*{\vspace*{-0.0cm}\includegraphics[height=1cm, width=0.3\textwidth, keepaspectratio, angle=0]{\firmenlogo}}	% firmenlogo etwas runtersetzen, da komisch formatiert
+\ihead*{\vspace*{0.0cm}\includegraphics[height=1cm, width=0.3\textwidth, keepaspectratio, angle=0]{\firmenlogo}}	% firmenlogo etwas runtersetzen, da komisch formatiert
 \chead{\normalfont \headmark}		% "chapter" und "section" oben mittig anzeigen
 \ohead*{\includegraphics[height=1cm, angle=0]{img/dhbwlogo.png}}	% DHBW Logo
 
@@ -288,9 +289,9 @@
 	pdfcreator={pdflatex, LaTeX with KOMA-Script},
 	pdfpagemode=UseOutlines, 		% Beim Oeffnen Inhaltsverzeichnis anzeigen
 	pdfdisplaydoctitle=true, % Dokumenttitel statt Dateiname anzeigen.
-	breaklinks=true		
+	breaklinks=true,
+	linktoc=all
 }
-
 
 
 \newenvironment{symboltable}{
@@ -303,3 +304,10 @@
 	\renewcommand{\arraystretch}{\stretchbuf}
 	\par
 }
+
+
+\usepackage[nameinlink]{cleveref} % better ref command
+\Crefname{listing}{Code}{Code} % rename "Listing" to "Code" when referencing
+\newcommand{\anfz}[1]{\glqq{}#1\grqq{}} % Setzt Wort in anführungszeichen
+
+\usepackage{makecell} % better cell fomatting in tables
