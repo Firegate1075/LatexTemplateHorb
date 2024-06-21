@@ -37,7 +37,7 @@
 \usepackage{etoolbox} %Untersützt ifstrempty
 
 % footnotes
-\usepackage{chngcntr} 
+\usepackage{chngcntr}
 \counterwithout{footnote}{chapter} % make footnotes not reset at the beginning of a chapter
 \renewcommand{\thempfootnote}{\arabic{mpfootnote}} % number footnotes
 \usepackage[perpage, hang, multiple, stable]{footmisc} % add footnote stuff
@@ -59,24 +59,24 @@
 \usepackage{blindtext}
 \blindmathtrue
 
- % colors
- \usepackage{color, colortbl}
- %Farbdefinition von hellgrau
- \definecolor{light-gray}{gray}{0.75}
- \definecolor{lightgray}{rgb}{.9,.9,.9}
- \definecolor{darkgray}{rgb}{.4,.4,.4}
- \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
- \definecolor{darkgreen}{RGB}{0, 238, 0}
- \definecolor{blue}{RGB}{44, 111, 235}
- %%%VISUAL STUDIO COLORS
- \definecolor{VSblue}{RGB}{44, 111, 235}
- \definecolor{VSstringred}{RGB}{163, 21, 21}
- \definecolor{VScitrine}{rgb}{0.89, 0.82, 0.04}
- \definecolor{VSblack}{rgb}{0.0, 0.0, 0.0}
- \definecolor{VSgreencomments}{rgb}{0,0.5,0}
- \definecolor{VSclassGreen}{RGB}{0, 125, 154}
- 
- \usepackage[dvipsnames,table,xcdraw]{xcolor} % needs to be loaded before pgfplots!
+% colors
+\usepackage{color, colortbl}
+%Farbdefinition von hellgrau
+\definecolor{light-gray}{gray}{0.75}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{darkgreen}{RGB}{0, 238, 0}
+\definecolor{blue}{RGB}{44, 111, 235}
+%%%VISUAL STUDIO COLORS
+\definecolor{VSblue}{RGB}{44, 111, 235}
+\definecolor{VSstringred}{RGB}{163, 21, 21}
+\definecolor{VScitrine}{rgb}{0.89, 0.82, 0.04}
+\definecolor{VSblack}{rgb}{0.0, 0.0, 0.0}
+\definecolor{VSgreencomments}{rgb}{0,0.5,0}
+\definecolor{VSclassGreen}{RGB}{0, 125, 154}
+
+\usepackage[dvipsnames,table,xcdraw]{xcolor} % needs to be loaded before pgfplots!
 
 
 %floats
@@ -88,7 +88,7 @@
 	%format=hang, justification=justified,									% format option 1: indented text,	label normal,	separated with colon,	justification
 	format=plain, justification=justified, labelfont=bf, labelsep=quad, 	% format option 2: no indents,		label bold,		separated with tab,		justification
 	singlelinecheck=true % center captions if they fit into a single line 
-	]{caption}
+]{caption}
 \usepackage{subcaption} % adds caption support for subfigures
 %\captionsetup[table]{position=above, aboveskip=4pt}%, belowskip=6pt} % should place the caption of tables above the table. Does not work!
 
@@ -105,7 +105,7 @@
 \usepackage{array}% in the preamble
 
 %figures
-\usepackage[pdftex]{graphicx}		
+\usepackage[pdftex]{graphicx}
 \graphicspath{{img/}}
 \usepackage{wrapfig} % allow placement of figures in text (wrap text around figure)
 
@@ -161,7 +161,8 @@
 	%fillcolor=\color{ListingBackground},
 	keywordstyle=\color[rgb]{0.133,0.133,0.6},
 	commentstyle=\color[rgb]{0.133,0.545,0.133},
-	stringstyle=\color[rgb]{0.627,0.126,0.941}
+	stringstyle=\color[rgb]{0.627,0.126,0.941},
+	aboveskip=\baselineskip	% some space to text above
 } % uses textcomp
 \renewcommand\lstlistingname{Codeausschnitt}
 \renewcommand\lstlistlistingname{Quellcodeverzeichnis}
@@ -169,13 +170,13 @@
 %Umlaute und Sonderzeichen im listings erlauben
 \lstset{literate=%
 	{Ö}{{\"O}}1
-	{Ä}{{\"A}}1
-	{Ü}{{\"U}}1
-	{ß}{{\ss}}2
-	{ü}{{\"u}}1
-	{ä}{{\"a}}1
-	{ö}{{\"o}}1
-	{&}{{\&}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+{&}{{\&}}1
 }
 
 
@@ -206,7 +207,7 @@
 
 \acsetup{
 	first-style=shortLong,
-	trailing/activate={dash}, 
+	trailing/activate={dash},
 	make-links=true,
 	list/heading=addchap, % format table of acronyms (toa) as chapter* and add tot toc (\addchap of KOMA)
 	list/name= {Abkürzungsverzeichnis} % make table-of-commands style uniform
@@ -218,8 +219,8 @@
 	bibstyle=alphabetic, %authortitle,
 	language=ngerman, %Quellen auf Deutsch
 	hyperref=true, %Anklickbare Referenzen
-	natbib=true, 
-	backend=biber, 
+	natbib=true,
+	backend=biber,
 	pagetracker=true, %ebd. bei wiederholten Angaben
 	bibencoding=utf8,
 	backrefstyle=three+, % fasst Seiten zusammen, z. B S. 2f, 6ff, 7-10
@@ -227,7 +228,7 @@
 	bibwarn=true]{biblatex}
 
 \renewcommand*{\labelalphaothers}{\textsuperscript{+}} % handle multiple authors
-	
+
 \usepackage[babel,german=guillemets]{csquotes} % select quotes for bibliography
 \setlength{\bibitemsep}{1em}     % Abstand zwischen den Literaturangaben
 \setlength{\bibhang}{2em}        % Einzug nach jeweils erster Zeile
@@ -237,7 +238,7 @@
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
 
-				
+
 % kopf und fußzeile
 \usepackage[headsepline, footsepline, plainheadsepline, plainfootsepline]{scrlayer-scrpage}		% linie aktivieren für "headings" und "plain" seiten
 \automark{chapter}		% aktivieren das "chapter" und "section" oeben angezeigt werden kann
@@ -249,7 +250,7 @@
 \clearpairofpagestyles
 
 % Der "*" macht, dass hier konfigurierte Einstellungen auch für "plain"-Seiten gelten
-\ihead*{\vspace*{-0.0cm}\includegraphics[height=1cm, width=0.3\textwidth, keepaspectratio, angle=0]{\firmenlogo}}	% firmenlogo etwas runtersetzen, da komisch formatiert
+\ihead*{\vspace*{0.0cm}\includegraphics[height=1cm, width=0.3\textwidth, keepaspectratio, angle=0]{\firmenlogo}}	% firmenlogo etwas runtersetzen, da komisch formatiert
 \chead{\normalfont \headmark}		% "chapter" und "section" oben mittig anzeigen
 \ohead*{\includegraphics[height=1cm, angle=0]{img/dhbwlogo.png}}	% DHBW Logo
 
@@ -265,7 +266,7 @@
 % Formelverzeichniss
 \DeclareNewTOC[
 	tocentryindent=0pt,
-    tocentrynumwidth=2em,
+	tocentrynumwidth=2em,
 	type=equation,
 	name={Gl.},
 	types=equations,
@@ -288,9 +289,9 @@
 	pdfcreator={pdflatex, LaTeX with KOMA-Script},
 	pdfpagemode=UseOutlines, 		% Beim Oeffnen Inhaltsverzeichnis anzeigen
 	pdfdisplaydoctitle=true, % Dokumenttitel statt Dateiname anzeigen.
-	breaklinks=true		
+	breaklinks=true,
+	linktoc=all
 }
-
 
 
 \newenvironment{symboltable}{
@@ -303,3 +304,10 @@
 	\renewcommand{\arraystretch}{\stretchbuf}
 	\par
 }
+
+
+\usepackage[nameinlink]{cleveref} % better ref command
+\Crefname{listing}{Code}{Code} % rename "Listing" to "Code" when referencing
+\newcommand{\anfz}[1]{\glqq{}#1\grqq{}} % Setzt Wort in anführungszeichen
+
+\usepackage{makecell} % better cell fomatting in tables

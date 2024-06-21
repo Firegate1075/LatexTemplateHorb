@@ -267,3 +267,5 @@ TSWLatexianTemp*
 
 # exclude clean File for template
 _cleanTemplate.bat
+
+*SAVE-ERROR
