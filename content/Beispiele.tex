@@ -8,7 +8,7 @@ Dieses Kapitel ist nicht im Inhaltsverzeichnis sichtbar und wird nicht nummerier
 Text wird einfach geschrieben.
 Er kann auch \textbf{fett} oder \textit{kursiv} oder \textit{\textbf{beides}} sein.
 
-Sogar \textcolor{blue}{die Farbe} kann geändert werden!
+Sogar \textcolor{blue}{die Farbe} \textcolor{red}{kann} \textcolor{magenta}{geändert} werden!
 
 Mit einer Leerzeilen wird ein Absatz erstellt.
 Mit \anfz{\textbackslash\textbackslash} wird ein\\
@@ -16,14 +16,98 @@ Zeilenumbruch erstellt.
 
 Ganz einfach per \anfz{\textbackslash{}anfz\{Text\}} wird der Text in Anführungszeichen geschrieben.
 
-Quellen werden mit einem \anfz{\textbackslash{}cite\{\}} Befehel eingefügt \cite{Tietze2010}.
+Quellen werden mit einem \anfz{\textbackslash{}cite\{\}} Befehl eingefügt \cite{Tietze2010}.
+
+%              [links]{rechts}
+\begin{addmargin}[2em]{0pt}
+    Dieser Text ist eingerückt. Hier könnte super ein sehr langes wörtliches Zitat stehen oder sonst was, das Einrückung bedarf.
+\end{addmargin}
 
 \section{Ein Abschnitt!}
-Tauch auch im Inhaltsverzeichnis auf!
+Taucht auch im Inhaltsverzeichnis auf!
 \subsection{Ein untergeordneter Abschnitt}
-Tauch auch im Inhaltsverzeichnis auf!
+Taucht auch im Inhaltsverzeichnis auf!
 \subsubsection{Noch eine Stufe tiefer!}
 Wird nicht mehr im Inhaltsverzeichnis angezeigt.
 Doch es gibt auch
-\paragraph{Ein Paragraf} sogar einen
-\subparagraph{Unter-Paragrafen}
+\paragraph{Ein Paragraf} sogar eine
+\subparagraph{Unter-Paragraf} ist möglich!
+
+
+\chapter{Bilder einfügen}
+
+Zur Bildpositionierung schaut bitte hier rein: \url{https://www.overleaf.com/learn/latex/Positioning_images_and_tables} besser könnte ich es auch nicht erklären.
+
+Bilder sind sehr einfach einzufügen.
+Man kann direkt auf \cref{img:KatzeAusHogwarts1} verweisen, und muss nichts weiter machen!
+Wohl angemerkt, zeigt \cref{img:KatzeAusHogwarts1} eine Katze mit einem Zauberhut, nach allgemeinen Wissen, \textit{muss} dies von Hogwarts kommen.
+
+Es lässt sich auf \cref{img:KatzeAusHogwarts1,img:KatzeAusHogwarts2} verweisen
+
+\begin{figure}[H]
+    \includegraphics[width=0.75\textwidth]{hogwarts_cat.jpg}
+    \centering
+    \vspace{-5pt}
+    \caption{Katze, frisch aus Hogwarts!}
+    \label{img:KatzeAusHogwarts1}
+\end{figure}
+
+Man kann die Katze auch ganz lange ziehen:
+
+\begin{figure}[H]
+    \includegraphics[height=\textheight,width=\textwidth,keepaspectratio=false]{hogwarts_cat.jpg}
+    \centering
+    \vspace{-5pt}
+    \caption{Lange Katze, frisch aus Hogwarts!}
+    \label{img:KatzeAusHogwarts2}
+\end{figure}
+
+Wer lieber gleich vier Katzen haben möchte, kann diese Toll darstellen:
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{hogwarts_cat.jpg}
+        \caption*{Katze 1, frisch aus Hogwarts!}
+        \vspace{2ex}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{hogwarts_cat.jpg}
+        \caption*{Katze 2, frisch aus Hogwarts!}
+        \vspace{2ex}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{hogwarts_cat.jpg}
+        \caption*{Katze 3, frisch aus Hogwarts!}
+        \vspace{2ex}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{hogwarts_cat.jpg}
+        \caption*{Katze 4, frisch aus Hogwarts!}
+        \vspace{2ex}
+    \end{minipage}
+\end{figure}
+
+\chapter{Tabellen einfügen}
+\section{Schöne Tabellen mit booktabs}
+\section{Normale Tabellen}
+
+\chapter{Aufzählungen}
+
+\chapter{Formeln Einfügen}
+\begin{align}
+    a & = b + c     \\
+      & = d + e + f \\
+      & = g + h
+\end{align}
+
+
+\chapter{Tips und Tricks}
+\anfz{Strg + Click} im PDF Viewer (in VSCode-Tab oder Browser), um zur \LaTeX-Codestelle zu springen. \\
+Andersherum geht das auch, indem die stelle mit dem Cursor markiert wird und dann \anfz{Strg + Alt + J} gedrückt wird. \\
+Für den Fall, dass nicht an die richtige Stelle gesprungen wird, nochmal compilen.
+
+Per Rechtsklick in VSCode, kann über "Format Document" die gesamte Datei einheitlich eingerückt werden.
