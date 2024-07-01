@@ -1,0 +1,178 @@
+\chapter{Kapitel im Inhaltsverzeichnis}
+Dieses Kapitel ist im Inhaltsverzeichnis sichtbar.
+
+\chapter*{Kapitel nicht im Inhaltsverzeichnis}
+Dieses Kapitel ist nicht im Inhaltsverzeichnis sichtbar und wird nicht nummeriert.
+
+\chapter{Text schreiben}
+Text wird einfach geschrieben.
+Er kann auch \textbf{fett} oder \textit{kursiv} oder \textit{\textbf{beides}} sein.
+
+Sogar \textcolor{blue}{die Farbe} \textcolor{red}{kann} \textcolor{magenta}{geändert} werden!
+
+Mit einer Leerzeilen wird ein Absatz erstellt.
+Mit \anfz{\textbackslash\textbackslash} wird ein\\
+Zeilenumbruch erstellt.
+
+Ganz einfach per \anfz{\textbackslash{}anfz\{Text\}} wird der Text in Anführungszeichen geschrieben.
+
+Quellen werden mit einem \anfz{\textbackslash{}cite\{\}} Befehl eingefügt \cite{Tietze2010}.
+
+%              [links]{rechts}
+\begin{addmargin}[2em]{0pt}
+    Dieser Text ist eingerückt. Hier könnte super ein sehr langes wörtliches Zitat stehen oder sonst was, das Einrückung bedarf.
+\end{addmargin}
+
+Drei Punkte, nicht einzeln als ... schreiben, sondern als \dots{} einbinden.
+
+\section{Ein Abschnitt!}
+Taucht auch im Inhaltsverzeichnis auf!
+\subsection{Ein untergeordneter Abschnitt}
+Taucht auch im Inhaltsverzeichnis auf!
+\subsubsection{Noch eine Stufe tiefer!}
+Wird nicht mehr im Inhaltsverzeichnis angezeigt.
+Doch es gibt auch
+\paragraph{Ein Paragraf} sogar eine
+\subparagraph{Unter-Paragraf} ist möglich!
+
+
+\chapter{Bilder einfügen}
+
+Zur Bildpositionierung schaut bitte hier rein: \url{https://www.overleaf.com/learn/latex/Positioning_images_and_tables} besser könnte ich es auch nicht erklären.
+
+Bilder sind sehr einfach einzufügen.
+Man kann direkt auf \cref{img:KatzeAusHogwarts1} verweisen, und muss nichts weiter machen!
+Wohl angemerkt, zeigt \cref{img:KatzeAusHogwarts1} eine Katze mit einem Zauberhut, nach allgemeinen Wissen, \textit{muss} dies von Hogwarts kommen.
+
+Es lässt sich auf \cref{img:KatzeAusHogwarts1,img:KatzeAusHogwarts2} verweisen
+
+\begin{figure}[H]
+    \includegraphics[width=0.75\textwidth]{hogwarts_cat.jpg}
+    \centering
+    \vspace{-5pt}
+    \caption{Katze, frisch aus Hogwarts!}
+    \label{img:KatzeAusHogwarts1}
+\end{figure}
+
+Man kann die Katze auch ganz lange ziehen:
+
+\begin{figure}[H]
+    \includegraphics[height=0.95\textheight,width=15cm,keepaspectratio=false]{hogwarts_cat.jpg}
+    \centering
+    \vspace{-5pt}
+    \caption{Lange Katze, frisch aus Hogwarts!}
+    \label{img:KatzeAusHogwarts2}
+\end{figure}
+
+Wer lieber gleich vier Katzen haben möchte, kann diese Toll darstellen:
+
+\begin{figure}[H]
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{hogwarts_cat.jpg}
+        \caption*{Katze 1, frisch aus Hogwarts!}
+        \vspace{2ex}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{hogwarts_cat.jpg}
+        \caption*{Katze 2, frisch aus Hogwarts!}
+        \vspace{2ex}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{hogwarts_cat.jpg}
+        \caption*{Katze 3, frisch aus Hogwarts!}
+        \vspace{2ex}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{hogwarts_cat.jpg}
+        \caption*{Katze 4, frisch aus Hogwarts!}
+        \vspace{2ex}
+    \end{minipage}
+\end{figure}
+
+\chapter{Tabellen einfügen}
+\section{Schöne Tabellen mit booktabs}
+\section{Normale Tabellen}
+
+\chapter{Aufzählungen}
+Eine einfache Liste:
+\begin{itemize}
+    \item Erstes Item
+    \item Zweites Item
+          \begin{itemize}
+              \item Unter Item
+          \end{itemize}
+\end{itemize}
+
+Eine angepasste Liste:
+\begin{itemize}
+    \item Normaler Eintrag
+    \item [!] Eintrag mit Ausrufezeichen
+    \item [$\blacktriangle$] Eintrag mit Dreieck!
+    \item [Text] Eintrag mit Text!
+    \item [] Eintrag mit nichts?
+\end{itemize}
+
+Nummerierte Aufzählung:
+\begin{enumerate}
+    \item Numero Uno
+    \item Numero Dos
+          \begin{enumerate}
+              \item 	Auch Verschachtelung möglich!
+          \end{enumerate}
+          \begin{itemize}
+              \item Oder die Mischung von Listen!
+          \end{itemize}
+\end{enumerate}
+
+Es sind auch Beschreibungen möglich:
+\begin{description}
+    \item[Das Label] Das Label steht in eckigen Klammern und ist ein optionales Argument. Dieser absolut, unnötig, übertrieben, redundanter, schwachsinnige hyperbolisch lange Text, wird automatisch etwas eingerückt, womit deutlich wird, dass er zu dem definierten Label gehört.
+    \item[Katzen] Katzen sind einfach super süß.
+\end{description}
+
+\chapter{Formeln Einfügen}
+
+In \cref{eq:NablaRechnung} ist eine Rechnung mit dem Operator Nabla zu sehen.
+\begin{equation}
+    \nabla \times\left(\overrightarrow{F_2} \cdot \nabla\right) \overrightarrow{G}
+    =
+    \nabla \times
+    \begin{pmatrix}
+        2x \\ 4y\\ 6z
+    \end{pmatrix}
+    =
+    \begin{vmatrix}
+        \overrightarrow{e_x}        & \overrightarrow{e_y}        & \overrightarrow{e_z}        \\
+        \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+        2x                          & 4y                          & 6z
+    \end{vmatrix}
+    =
+    \begin{pmatrix}
+        0 \\ 0 \\ 0
+    \end{pmatrix}
+    \label{eq:NablaRechnung}
+\end{equation}
+
+Mehrere Gleichungen lasse sich ausrichten, z.B. für Umformungen:
+\begin{figure}[H]
+    \begin{align}
+        a & = b + c     \\
+          & = d + e + f \\
+          & = g + h
+        \label{eq:Unsinn}
+    \end{align}
+\end{figure}
+\addequations{Beispiel zur Nutzung von Formeln welche aligned sind}
+\cref{eq:Unsinn} zeigt quatsch, wobei sicher ein Sinn darin liegen könnte.
+
+
+\chapter{Tips und Tricks}
+\anfz{Strg + Click} im PDF Viewer (in VSCode-Tab oder Browser), um zur \LaTeX-Codestelle zu springen. \\
+Andersherum geht das auch, indem die stelle mit dem Cursor markiert wird und dann \anfz{Strg + Alt + J} gedrückt wird. \\
+Für den Fall, dass nicht an die richtige Stelle gesprungen wird, nochmal compilen.
+
+Per Rechtsklick in VSCode, kann über "Format Document" die gesamte Datei einheitlich eingerückt werden.
